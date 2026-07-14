@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard </title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#252525,#908163,#cbc2c4);
+    min-height:100vh;
+    padding:50px;
+  
+}
+
+h1{
+    text-align:center;
+    color:#dad0d0;
+    margin:10px 0 30px;
+    font-size:60px;
+    letter-spacing:3px;
+    text-shadow:2px 2px 5px rgba(0,0,0,.2);
+}
+
+.keyboard{
+    width:95%;
+    margin:auto;
+    padding:20px;
+    border: 3px solid rgba(0,0,0,.2);
+    
+    
+}
+
+.row{
+    display:flex;
+    justify-content:center;
+  
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.key{
+    width:92px;
+    height:50px;
+   color:#fff;
+    border-radius:4px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    cursor:pointer;
+    user-select:none;
+    padding:10px;
+    box-shadow:
+    0 6px 10px rgba(0,0,0,.35),
+    inset 0 1px 2px rgba(255,255,255,.7);
+
+    transition:.15s;
+    background-color:rgba(41, 40, 40, 0.932)
+}
+
+.key:hover{
+    transform:translateY(-3px);
+}
+
+.key:active{
+    transform:translateY(3px);
+    box-shadow:0 2px 5px rgba(0,0,0,.3);
+}
+
+/* Different key sizes */
+
+.tab{width:170px;}
+.caps{width:145px;}
+.shift{width:200px;}
+.enter{width:160px;}
+.backspace{width:220px;}
+.space{width:600px;}
+.print{width:130px;}
+</style>
+
+</head>
+<body>
+
+<h1>KEYBOARD</h1>
+
+<div class="keyboard">
+
+<!-- Row 1 -->
+<div class="row">
+<div class="key">Esc</div>
+<div class="key">F1</div>
+<div class="key">F2</div>
+<div class="key">F3</div>
+<div class="key">F4</div>
+<div class="key">F5</div>
+<div class="key">F6</div>
+<div class="key">F7</div>
+<div class="key">F8</div>
+<div class="key">F9</div>
+<div class="key">F10</div>
+<div class="key">F11</div>
+<div class="key">F12</div>
+<div class="key">Insert</div>
+<div class="key print">PrintScr</div>
+<div class="key">Delete</div>
+</div>
+
+<!-- Row 2 -->
+<div class="row">
+<div class="key">~</div>
+<div class="key">1</div>
+<div class="key">2</div>
+<div class="key">3</div>
+<div class="key">4</div>
+<div class="key">5</div>
+<div class="key">6</div>
+<div class="key">7</div>
+<div class="key">8</div>
+<div class="key">9</div>
+<div class="key">10</div>
+<div class="key">-</div>
+<div class="key">=</div>
+<div class="key backspace">Backspace</div>
+<div class="key">Home</div>
+</div>
+
+<!-- Row 3 -->
+<div class="row">
+<div class="key tab">Tab</div>
+<div class="key">Q</div>
+<div class="key">W</div>
+<div class="key">E</div>
+<div class="key">R</div>
+<div class="key">T</div>
+<div class="key">Y</div>
+<div class="key">U</div>
+<div class="key">I</div>
+<div class="key">O</div>
+<div class="key">P</div>
+<div class="key">{</div>
+<div class="key">}</div>
+<div class="key">\</div>
+<div class="key">Pg Up</div>
+</div>
+
+<!-- Row 4 -->
+<div class="row">
+<div class="key caps">Caps Lock</div>
+<div class="key">A</div>
+<div class="key">S</div>
+<div class="key">D</div>
+<div class="key">F</div>
+<div class="key">G</div>
+<div class="key">H</div>
+<div class="key">I</div>
+<div class="key">J</div>
+<div class="key">K</div>
+<div class="key">L</div>
+<div class="key">;</div>
+<div class="key">"</div>
+<div class="key enter">Enter</div>
+<div class="key">Pg Dn</div>
+</div>
+
+<!-- Row 5 -->
+<div class="row">
+<div class="key shift">Shift</div>
+<div class="key">Z</div>
+<div class="key">X</div>
+<div class="key">C</div>
+<div class="key">V</div>
+<div class="key">B</div>
+<div class="key">N</div>
+<div class="key">M</div>
+<div class="key">&lt;</div>
+<div class="key">&gt;</div>
+<div class="key">?</div>
+<div class="key shift">Shift</div>
+<div class="key">↑</div>
+<div class="key">End</div>
+</div>
+
+<!-- Row 6 -->
+<div class="row">
+<div class="key">Ctrl</div>
+<div class="key">Fn</div>
+<div class="key">Win</div>
+<div class="key">Alt</div>
+<div class="key space">Space</div>
+<div class="key">Alt</div>
+<div class="key">Fn</div>
+<div class="key">Ctrl</div>
+<div class="key">←</div>
+<div class="key">↓</div>
+<div class="key">→</div>
+</div>
+
+</div>
+
+</body>
+</html>
