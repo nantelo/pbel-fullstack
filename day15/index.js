@@ -43,7 +43,33 @@ async function renderData(data){
         button.style.backgroundColor="#0f62fe";
         button.style.color="white"
 
-        cardDiv.append(cat, img, title, price, button);
+        const button1 = document.createElement("button");
+        button1.innerText="view detail";
+        button1.style.border="1px solid none";
+        button1.style.padding="5px";
+        button1.style.width="90%"
+        button1.style.backgroundColor="#0f62fe";
+        button1.style.color="white"
+
+        
+
+        button1.addEventListener("click",(e)=>{
+            singleProductFun(el)
+        })
+        const button2 = document.createElement("button");
+        button2.innerText="cart";
+        button2.style.border="1px solid none";
+        button2.style.padding="5px";
+        button2.style.width="90%"
+        button2.style.backgroundColor="#0f62fe";
+        button2.style.color="white"
+        button2.style.marginTop="10px";
+
+        button2.addEventListener("click", ()=>{
+            addToCart(el, i)
+        })
+
+        cardDiv.append(cat, img, title, price, button,button1,button2);
 
         parentContainer.append(cardDiv)
         
@@ -53,5 +79,16 @@ async function renderData(data){
 }
 
 
+function singleProductFun(product){
+    localStorage.setItem("singleProduct", JSON.stringify(product));
+
+    window.location.href="../day16/singleProduct.html"
+}
+function addToCart(el, i){
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(el);
+
+    localStorage.setItem("cart", JSON.stringify(cart))
+}
 
 fetchData()

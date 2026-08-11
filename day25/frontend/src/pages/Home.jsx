@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 
 const Home = () =>{
   const [count, setCount] = useState(3);
   const [data, setData ] = useState([]);
-
+  const [user, setUser] = useState([]);
   const fetchData = () =>{
-    fetch('https://fakestoreapi.com/products/')
+    fetch('https://fakestoreapi.com/users')
     .then((res)=>res.json())
-    .then((data)=>setData(data))
+    .then((user)=>setUser(user))
     .catch((err)=>console.log(err))
   }
 
@@ -33,16 +33,27 @@ const Home = () =>{
       <button onClick={handleDecrement}>Decrement</button>
 
       <div>
-        <h3>Fetched Data:</h3>
+        {/* <h3>Fetched Data:</h3>
         {data.map((item) => (
           <div key={item.id} style={{border: '1px solid #ccc', padding: '10px', margin: '10px'}}>
             <h4>{item.title}</h4>
             <img src={item.image} alt={item.title} width="100" />
             <p>{item.description}</p>
           </div>
+        ))} */}
+
+          <h3>Fetched Data:</h3>
+        {user.map((item) => (
+          <div key={item.id} style={{border: '1px solid #ccc', padding: '10px', margin: '10px'}}>
+            <h4>{item.email}</h4>
+            <p>{item.password}</p>
+            <p>{item.username}</p>
+          </div>
         ))}
       </div>
-    </div>
+      </div>
+
+    
   )
 }
 
